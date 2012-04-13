@@ -63,7 +63,7 @@ do
     it "should have a password confirmation field"
 do
       get :new
-      response.should have_selector("input[confirmation='user[confirmation]'][type='text']")
+      response.should have_selector("input[password_confirmation='user[password_confirmation]'][type='text']")
     end
   
   end
