@@ -19,6 +19,8 @@ describe "Users" do
         end.should_not change(User, :count)
       end
     end
+end
+end
 describe "success" do
 
       it "should make a new user" do
@@ -34,8 +36,7 @@ describe "success" do
           response.should render_template('users/show')
         end.should change(User, :count).by(1)
       end
-    end
-  end
+    
 describe "sign in/out" do
 
     describe "failure" do

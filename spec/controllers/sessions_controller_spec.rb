@@ -37,7 +37,7 @@ describe "POST 'create'" do
         post :create, :session => @attr
         flash.now[:error].should =~ /invalid/i
       end
-    end
+    
 describe "with valid email and password" do
 
       before(:each) do
@@ -62,10 +62,11 @@ describe "DELETE 'destroy'" do
 
     it "should sign a user out" do
       test_sign_in(Factory(:user))
-      delete :destroy
+      #integration_sign_in(Factory(:user))
+delete :destroy
       controller.should_not be_signed_in
       response.should redirect_to(root_path)
     end
   end
-
+end
 end
