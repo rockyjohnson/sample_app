@@ -39,7 +39,10 @@ has_many :microposts, :dependent => :destroy
 		encrypted_password==encrypt(submitted_password)
 
 	end
-
+ def feed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Micropost.where("user_id = ?", id)
+  end
 	#private
 
 	def encrypt_password

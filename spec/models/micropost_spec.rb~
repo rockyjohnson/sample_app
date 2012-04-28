@@ -25,6 +25,7 @@ describe Micropost do
       @micropost.user_id.should == @user.id
       @micropost.user.should == @user
     end
+end
 describe "validations" do
 
     it "should require a user id" do
@@ -40,4 +41,4 @@ describe "validations" do
     end
   end
   end
-end
+
